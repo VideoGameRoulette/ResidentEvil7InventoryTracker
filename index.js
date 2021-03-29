@@ -98,7 +98,8 @@ function appendData(data) {
 			newData[aboveItem.SlotPosition].includes("inventoryslot2");
 		//console.log(SortedInventory[i].ItemName, previousItemIsDouble, aboveItemIsDouble, i);
 		if (SortedInventory[i].IsEmptySlot) {
-			if (i != 0 && previousItem.SlotPosition > 3 && previousItemIsDouble || aboveItemIsDouble) {
+			console.log(previousItem, aboveItem);
+			if (i != 0 && i > 3 && previousItemIsDouble || SortedInventory[i].SlotPosition < 4 && aboveItemIsDouble) {
 				newData[i] = ``;
 			}
 			else {
