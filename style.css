@@ -1,0 +1,212 @@
+body {
+	background-color: #000000;
+	color: #ffffff;
+	font-family: "Courier Prime", monospace;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+}
+
+.container {
+	width: 365px;
+	height: 543px;
+}
+
+#srtQueryData {
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.emptyslot {
+	z-index: 1;
+	width: 80px;
+	height: 80px;
+	background: url(./Items/Empty.png) no-repeat;
+}
+
+.inventoryslot {
+	z-index: 1;
+	width: 80px;
+	height: 80px;
+	background: url(./Items/Slot1.png) no-repeat;
+}
+
+.inventoryslot2 {
+	z-index: 2;
+	width: 169px;
+	height: 80px;
+	background: url(./Items/Slot2.png) no-repeat;
+}
+
+.inventoryslot2H {
+	z-index: 2;
+	width: 80px;
+	height: 169px;
+	background: url(./Items/Slot2.png) no-repeat;
+}
+
+.quantity {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	padding: 2px 12px 2px 5px;
+	background: linear-gradient(-90deg, rgba(9,9,121,0) 0%, rgba(0,0,0,1) 90%);
+}
+
+.ammo {
+	position: absolute;
+	bottom: 3px;
+	left: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,0) 82%);
+}
+
+#slot0 {
+	position: absolute;
+	top: 9px;
+	left: 9px;
+}
+
+#slot1 {
+	position: absolute;
+	top: 9px;
+	left: 98px;
+}
+
+#slot2 {
+	position: absolute;
+	top: 9px;
+	left: 187px;
+}
+
+#slot3 {
+	position: absolute;
+	top: 9px;
+	left: 276px;
+}
+
+#slot4 {
+	position: absolute;
+	top: 98px;
+	left: 9px;
+}
+
+#slot5 {
+	position: absolute;
+	top: 98px;
+	left: 98px;
+}
+
+#slot6 {
+	position: absolute;
+	top: 98px;
+	left: 187px;
+}
+
+#slot7 {
+	position: absolute;
+	top: 98px;
+	left: 276px;
+}
+
+#slot8 {
+	position: absolute;
+	top: 187px;
+	left: 9px;
+}
+
+#slot9 {
+	position: absolute;
+	top: 187px;
+	left: 98px;
+}
+
+#slot10 {
+	position: absolute;
+	top: 187px;
+	left: 187px;
+}
+
+#slot11 {
+	position: absolute;
+	top: 187px;
+	left: 276px;
+}
+
+#slot12 {
+	position: absolute;
+	top: 276px;
+	left: 9px;
+}
+
+#slot13 {
+	position: absolute;
+	top: 276px;
+	left: 98px;
+}
+
+#slot14 {
+	position: absolute;
+	top: 276px;
+	left: 187px;
+}
+
+#slot15 {
+	position: absolute;
+	top: 276px;
+	left: 276px;
+}
+
+#slot16 {
+	position: absolute;
+	top: 365px;
+	left: 9px;
+}
+
+#slot17 {
+	position: absolute;
+	top: 365px;
+	left: 98px;
+}
+
+#slot18 {
+	position: absolute;
+	top: 365px;
+	left: 187px;
+}
+
+#slot19 {
+	position: absolute;
+	top: 365px;
+	left: 276px;
+}
+
+#slot20 {
+	position: absolute;
+	top: 365px;
+	left: 9px;
+}
+
+#slot21 {
+	position: absolute;
+	top: 365px;
+	left: 98px;
+}
+
+#slot22 {
+	position: absolute;
+	top: 365px;
+	left: 187px;
+}
+
+#slot23 {
+	position: absolute;
+	top: 365px;
+	left: 276px;
+}
