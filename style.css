@@ -67,6 +67,198 @@ img {
 	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,0) 82%);
 }
 
+#selectedslot0 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(9px + 30px);
+	left: calc(9px + 30px);
+}
+
+#selectedslot1 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(9px + 30px);
+	left: calc(98px + 30px);
+}
+
+#selectedslot2 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(9px + 30px);
+	left: calc(187px + 30px);
+}
+
+#selectedslot3 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(9px + 30px);
+	left: calc(276px + 30px);
+}
+
+#selectedslot4 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(98px + 30px);
+	left: calc(9px + 30px);
+}
+
+#selectedslot5 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(98px + 30px);
+	left: calc(98px + 30px);
+}
+
+#selectedslot6 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(98px + 30px);
+	left: calc(187px + 30px);
+}
+
+#selectedslot7 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(98px + 30px);
+	left: calc(276px + 30px);
+}
+
+#selectedslot8 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(187px + 30px);
+	left: calc(9px + 30px);
+}
+
+#selectedslot9 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(187px + 30px);
+	left: calc(98px + 30px);
+}
+
+#selectedslot10 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(187px + 30px);
+	left: calc(187px + 30px);
+}
+
+#selectedslot11 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(187px + 30px);
+	left: calc(276px + 30px);
+}
+
+#selectedslot12 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(276px + 30px);
+	left: calc(9px + 30px);
+}
+
+#selectedslot13 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(276px + 30px);
+	left: calc(98px + 30px);
+}
+
+#selectedslot14 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(276px + 30px);
+	left: calc(187px + 30px);
+}
+
+#selectedslot15 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(276px + 30px);
+	left: calc(276px + 30px);
+}
+
+#selectedslot16 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(365px + 30px);
+	left: calc(9px + 30px);
+}
+
+#selectedslot17 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(365px + 30px);
+	left: calc(98px + 30px);
+}
+
+#selectedslot18 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(365px + 30px);
+	left: calc(187px + 30px);
+}
+
+#selectedslot19 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(365px + 30px);
+	left: calc(276px + 30px);
+}
+
+#selectedslot20 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(454px + 30px);
+	left: calc(9px + 30px);
+}
+
+#selectedslot21 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: calc(454px + 30px);
+	left: calc(98px + 30px);
+}
+
+#selectedslot22 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: top: calc(454px + 30px);
+	left: calc(187px + 30px);
+}
+
+#selectedslot23 {
+	position: absolute;
+	z-index: 5;
+	color: white;
+	top: top: calc(454px + 30px);
+	left: calc(276px + 30px);
+}
+
 #slot0 {
 	position: absolute;
 	top: 9px;
@@ -189,24 +381,24 @@ img {
 
 #slot20 {
 	position: absolute;
-	top: 365px;
+	top: 454px;
 	left: 9px;
 }
 
 #slot21 {
 	position: absolute;
-	top: 365px;
+	top: 454px;
 	left: 98px;
 }
 
 #slot22 {
 	position: absolute;
-	top: 365px;
+	top: 454px;
 	left: 187px;
 }
 
 #slot23 {
 	position: absolute;
-	top: 365px;
+	top: 454px;
 	left: 276px;
 }

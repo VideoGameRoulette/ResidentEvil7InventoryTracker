@@ -1,6 +1,6 @@
 const JSON_ADDRESS = "127.0.0.1";
 const JSON_PORT = 7190;
-const POLLING_RATE = 10000;
+const POLLING_RATE = 1000;
 
 const JSON_ENDPOINT = `http://${JSON_ADDRESS}:${JSON_PORT}/`;
 
@@ -60,6 +60,7 @@ function appendData(data) {
 
 	var mainContainer = document.getElementById("srtQueryData");
 	mainContainer.innerHTML = "";
+
 	if (data.PlayerInventory[0].SlotPosition == -1) {
 		mainContainer.innerHTML = `<div class="emptyslot" id="slot${i}"></div>`;
 		return;
@@ -100,7 +101,7 @@ function appendData(data) {
 			aboveItemExists &&
 			typeof newData[aboveItem.SlotPosition] !== "undefined" &&
 			newData[aboveItem.SlotPosition].includes("inventoryslot2");
-		console.log(SortedInventory[i].ItemName, previousItemIsDouble, aboveItemIsDouble, i);
+		//console.log(SortedInventory[i].ItemName, previousItemIsDouble, aboveItemIsDouble, i);
 		if (SortedInventory[i].IsEmptySlot) {
 			if (previousItem.SlotPosition > 3 && previousItemIsDouble || aboveItemIsDouble) {
 				newData[i] = ``;
@@ -136,6 +137,11 @@ function appendData(data) {
 		mainContainer.innerHTML = newData.join("\n");
 	}
 	mainContainer.innerHTML = newData.join("\n");
+	if (data.PlayerCurrentSelectedInventorySlots != null)
+	{
+		//console.log(data.PlayerCurrentSelectedInventorySlots);
+		mainContainer.innerHTML += `<div id="selectedslot${data.PlayerCurrentSelectedInventorySlots}"><i class="fas fa-hand-pointer"></i></div>`;
+	}
 }
 
 function resetInventory() {
