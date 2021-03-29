@@ -247,7 +247,7 @@ img {
 	position: absolute;
 	z-index: 5;
 	color: white;
-	top: top: calc(454px + 30px);
+	top: calc(454px + 30px);
 	left: calc(187px + 30px);
 }
 
@@ -255,7 +255,7 @@ img {
 	position: absolute;
 	z-index: 5;
 	color: white;
-	top: top: calc(454px + 30px);
+	top: calc(454px + 30px);
 	left: calc(276px + 30px);
 }
 
@@ -401,4 +401,44 @@ img {
 	position: absolute;
 	top: 454px;
 	left: 276px;
+}
+
+#equip0 {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	z-index: 10;
+	top: 9px;
+	left: 9px;
+	background: url(./Items/Equip0.png) no-repeat;
+}
+
+#equip1 {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	z-index: 10;
+	top: 9px;
+	left: 98px;
+	background: url(./Items/Equip1.png) no-repeat;
+}
+
+#equip2 {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	z-index: 10;
+	top: 9px;
+	left: 187px;
+	background: url(./Items/Equip2.png) no-repeat;
+}
+
+#equip3 {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	z-index: 10;
+	top: 9px;
+	left: 276px;
+	background: url(./Items/Equip3.png) no-repeat;
 }

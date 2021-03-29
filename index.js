@@ -8,7 +8,8 @@ var json;
 
 var InventoryCount;
 var PlayerInventory;
-var SortedInventory = [];
+var SortedInventory = [
+];
 var newData = [];
 
 const defaultItemObject = {
@@ -24,7 +25,6 @@ const defaultItemObject = {
 }
 
 window.onload = function () {
-	resetInventory();
 	getData();
 	setInterval(getData, POLLING_RATE);
 };
@@ -56,15 +56,13 @@ function getData() {
 }
 
 function appendData(data) {
+	//console.log(data);
+	InventoryCount = data.PlayerInventorySlots;
 	resetInventory();
 
 	var mainContainer = document.getElementById("srtQueryData");
 	mainContainer.innerHTML = "";
 
-	if (data.PlayerInventory[0].SlotPosition == -1) {
-		mainContainer.innerHTML = `<div class="emptyslot" id="slot${i}"></div>`;
-		return;
-	}
 	PlayerInventory = data.PlayerInventory;
 	PlayerInventory.sort(function (a, b) {
 		if (a.SlotPosition > b.SlotPosition) {
@@ -84,18 +82,15 @@ function appendData(data) {
 		}
 	});
 
-	//console.log(PlayerInventory);
-	InventoryCount = data.PlayerInventorySlots;
+	//console.log(SortedInventory);
 	for (var i = 0; i < InventoryCount; i++) {
 		var previousItem = SortedInventory[i - 1];
-		//if (previousItem !== "undefined") console.log("Previous Item Index: ", previousItem.SlotPosition);
 		var previousItemExists = typeof previousItem !== "undefined";
 		var previousItemIsDouble =
 			previousItemExists &&
 			typeof newData[previousItem.SlotPosition] !== "undefined" &&
 			newData[previousItem.SlotPosition].includes("inventoryslot2");
 		var aboveItem = SortedInventory[i - 4];
-		//if (aboveItem !== "undefined") console.log("Above Item Index: ", aboveItem.SlotPosition);
 		var aboveItemExists = typeof aboveItem !== "undefined";
 		var aboveItemIsDouble =
 			aboveItemExists &&
@@ -103,7 +98,7 @@ function appendData(data) {
 			newData[aboveItem.SlotPosition].includes("inventoryslot2");
 		//console.log(SortedInventory[i].ItemName, previousItemIsDouble, aboveItemIsDouble, i);
 		if (SortedInventory[i].IsEmptySlot) {
-			if (previousItem.SlotPosition > 3 && previousItemIsDouble || aboveItemIsDouble) {
+			if (i != 0 && previousItem.SlotPosition > 3 && previousItemIsDouble || aboveItemIsDouble) {
 				newData[i] = ``;
 			}
 			else {
@@ -142,10 +137,15 @@ function appendData(data) {
 		//console.log(data.PlayerCurrentSelectedInventorySlots);
 		mainContainer.innerHTML += `<div id="selectedslot${data.PlayerCurrentSelectedInventorySlots}"><i class="fas fa-hand-pointer"></i></div>`;
 	}
+
+	mainContainer.innerHTML += `<div id="equip0"></div>`;
+	mainContainer.innerHTML += `<div id="equip1"></div>`;
+	mainContainer.innerHTML += `<div id="equip2"></div>`;
+	mainContainer.innerHTML += `<div id="equip3"></div>`;
 }
 
 function resetInventory() {
-	for (var i = 0; i < 24; i++) 
+	for (var i = 0; i < InventoryCount; i++) 
 	{
 		SortedInventory[i] = defaultItemObject;
 		SortedInventory[i].SlotPosition = i;
