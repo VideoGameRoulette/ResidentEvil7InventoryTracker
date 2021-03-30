@@ -10,7 +10,6 @@ var InventoryCount;
 var PlayerInventory;
 var SortedInventory = [
 ];
-var newData = [];
 
 const defaultItemObject = {
 	_DebuggerDisplay: "[#-1] Empty Slot",
@@ -56,6 +55,7 @@ function getData() {
 }
 
 function appendData(data) {
+	var newData = [];
 	//console.log(data);
 	InventoryCount = data.PlayerInventorySlots;
 	resetInventory();
@@ -99,7 +99,7 @@ function appendData(data) {
 		//console.log(SortedInventory[i].ItemName, previousItemIsDouble, aboveItemIsDouble, i);
 		if (SortedInventory[i].IsEmptySlot) {
 			console.log(previousItem, aboveItem);
-			if (i != 0 && i > 3 && previousItemIsDouble || SortedInventory[i].SlotPosition < 4 && aboveItemIsDouble) {
+			if (i != 0 && i < 3 && previousItemIsDouble || SortedInventory[i].SlotPosition < 4 && aboveItemIsDouble) {
 				newData[i] = ``;
 			}
 			else {
