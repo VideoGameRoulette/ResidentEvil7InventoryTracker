@@ -99,7 +99,7 @@ function appendData(data) {
 		//console.log(SortedInventory[i].ItemName, previousItemIsDouble, aboveItemIsDouble, i);
 		if (SortedInventory[i].IsEmptySlot) {
 			console.log(previousItem, aboveItem);
-			if (i != 0 && i < 3 && previousItemIsDouble || SortedInventory[i].SlotPosition < 4 && aboveItemIsDouble) {
+			if (i != 0 && i > 4 && previousItemIsDouble || SortedInventory[i].SlotPosition < 4 && aboveItemIsDouble) {
 				newData[i] = ``;
 			}
 			else {
@@ -111,7 +111,7 @@ function appendData(data) {
 				newData[SortedInventory[i].SlotPosition] = `<div class="inventoryslot2" id="slot${i}"><img src="./Items/${SortedInventory[i].ItemName}.png" alt=${SortedInventory[i].ItemName}/><div class="quantity">${SortedInventory[i].Quantity}</div></div>`;
 			}
 			else if (SortedInventory[i].SlotCount == 2 && SortedInventory[i].SlotPosition <= 3) {
-				newData[SortedInventory[i].SlotPosition] = `<div class="inventoryslot2H" id="slot${i}"><img src="./Items/${SortedInventory[i].ItemName}.png" alt=${SortedInventory[i].ItemName}/><div class="quantity">${SortedInventory[i].Quantity}</div></div>`;
+				newData[SortedInventory[i].SlotPosition] = `<div class="inventoryslot2H" id="slot${i}"><img src="./Items/${SortedInventory[i].ItemName}H.png" alt=${SortedInventory[i].ItemName}/><div class="quantity">${SortedInventory[i].Quantity}</div></div>`;
 			}
 			else {
 				newData[SortedInventory[i].SlotPosition] = `<div class="inventoryslot" id="slot${i}"><img src="./Items/${SortedInventory[i].ItemName}.png"/><div class="quantity">${SortedInventory[i].Quantity}</div></div>`;
